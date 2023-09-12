@@ -6,7 +6,29 @@ namespace A3
 	//Our main method to print out to, and read from the console
         public static void Main(string[] args)
         {
+            Console.Write("How many numbers would you like to enter? ");
+            string quantStr = Console.ReadLine();
+            int quant = Convert.ToInt32(quantStr);
 
+            int[] nums = new int[quant];
+
+            for(int i = 0; i < quant; i++)
+            {
+                Console.Write($"Enter number {i+1}: ");
+                nums[i] = Convert.ToInt32 (Console.ReadLine());
+            }
+
+            Console.Write("Array: [");
+            for(int i = 0; i< quant-1; i++)
+            {
+                Console.Write(nums[i] + ",");
+            }
+            Console.WriteLine(nums[quant-1] + "]");
+
+            A3 myClass = new A3();
+
+            Console.WriteLine("Sum of numbers: " + myClass.SumOfList(nums));
+            Console.WriteLine("Product of numbers: " + myClass.ProdOfList(nums));
 	}
         
         //This function takes an array of numbers and returns the sum of those numbers
