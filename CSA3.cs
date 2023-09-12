@@ -29,6 +29,13 @@ namespace A3
 
             Console.WriteLine("Sum of numbers: " + myClass.SumOfList(nums));
             Console.WriteLine("Product of numbers: " + myClass.ProdOfList(nums));
+
+	    Console.Write("Array in Reverse: [");
+            for (int i = 0; i < quant - 1; i++)
+            {
+                Console.Write(myClass.ReverseOrder(nums)[i] + ",");
+            }
+            Console.WriteLine(myClass.ReverseOrder(nums)[quant - 1] + "]");
 	}
         
         //This function takes an array of numbers and returns the sum of those numbers
@@ -55,6 +62,19 @@ namespace A3
             }
 
             return prod;
+        }
+
+	//This function takes an array of numbers and returns an array in the reverse order
+        public int[] ReverseOrder(int[] numbers)
+        {
+            int[] reverse = new int[numbers.Length];
+
+            for(int i = 0; i<numbers.Length; i++)
+            {
+                reverse[numbers.Length-1-i] = numbers[i];
+            }
+
+            return reverse;
         }
 
         
