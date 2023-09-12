@@ -22,6 +22,19 @@ namespace A3
             return sum;
         }
 
+	//This function takes an array of numbers and returns the product of those numbers
+        public int ProdOfList(int[] numbers)
+        {
+            int prod = 1;
+
+            foreach (int i in numbers)
+            {
+                prod *= i;
+            }
+
+            return prod;
+        }
+
         
     }
 }
