@@ -57,6 +57,19 @@ namespace A3
             return prod;
         }
 
+	//This function takes an array of numbers and returns an array in the reverse order
+        public int[] ReverseOrder(int[] numbers)
+        {
+            int[] reverse = new int[numbers.Length];
+
+            for(int i = 0; i<numbers.Length; i++)
+            {
+                reverse[numbers.Length-1-i] = numbers[i];
+            }
+
+            return reverse;
+        }
+
         
     }
 }
